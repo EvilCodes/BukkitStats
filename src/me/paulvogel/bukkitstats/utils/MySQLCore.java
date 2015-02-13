@@ -15,6 +15,13 @@ public class MySQLCore implements DBCore {
     private String password;
     private String database;
 
+    /**
+     * Used to setup a new mysql database instance.
+     * @param host Database host (server)
+     * @param database Database name
+     * @param username Username
+     * @param password Password
+     */
     public MySQLCore(String host, String database, String username, String password) {
         this.database = database;
         this.host = host;
