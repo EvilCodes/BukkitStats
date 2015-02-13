@@ -1,0 +1,11 @@
+name: BukkitStats
+main: me.paulvogel.bukkitstats.BukkitStats
+author: Paul Vogel
+version: 1.0.0
+description: A simple & lightwight bukkit plugin for statistics on server networks working with MySQL and MongoDB
+website: http://www.paulvogel.me/
+commands:
+   bukkitstats:
+      description: Maincommand for help and more
+      usage: /<command> <arg>
+      aliases: [bs]

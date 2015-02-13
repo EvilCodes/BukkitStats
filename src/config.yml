@@ -1,0 +1,13 @@
+###MySQL Settings
+Database:
+   #Insert mysql or mongodb here
+   Type: "mysql"
+   Host: "localhost"
+   Username: "root"
+   Password: "root"
+   Databasename: "devtests"
+   Tableprefix: "bs_"
+###For sending debug messages
+Debug: false
+LogPrefix: "[BukkitStats]"
+ChatPrefix: "&a[BukkitStats]"

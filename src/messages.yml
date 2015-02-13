@@ -1,0 +1,12 @@
+#You can also use the following variables [%<name>%-syntax]: prefix (in config.yml), name (in plugin.yml), ver (in plugin.yml), time
+NoPermissions: "&cYou don't have to permissions to do this!"
+NoPlayer: "&cYou have to be a player to execute this command!"
+    ################
+####### Commands #######
+    ################
+Reloaded: "%prefix% &aReloaded!"
+Create:
+   Usage: "&cFalscher Befehl! Richtiger Befehl: &a/city create name tag"
+Help:
+   Header: "&6========== [ &a%name% &bHelp &6] =========="
+   Footer: "&6========== [ &a%name% &bHelp &6] =========="
