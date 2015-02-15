@@ -3,8 +3,9 @@ Database:
    #Insert mysql or mongodb here
    Type: "mysql"
    Host: "localhost"
+   Port: 3306
    Username: "root"
-   Password: "root"
+   Password: ""
    Databasename: "devtests"
    Tableprefix: "bs_"
 ###For sending debug messages

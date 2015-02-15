@@ -13,7 +13,11 @@ public class FilesHandler {
     private static File messagesFile;
     public static FileConfiguration messages;
 		
-	public static void CheckForConfigs() {
+    public static void init() {
+        CheckForConfigs();
+    }
+    
+	private static void CheckForConfigs() {
 		configFile = new File(BukkitStats.getInstance().getDataFolder(), "config.yml");
 		messagesFile = new File(BukkitStats.getInstance().getDataFolder(), "messages.yml");
 		

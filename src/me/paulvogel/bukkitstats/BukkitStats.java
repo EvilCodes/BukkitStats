@@ -1,6 +1,7 @@
 package me.paulvogel.bukkitstats;
 
 import me.paulvogel.bukkitstats.commands.BukkitStatsCommandExecutor;
+import me.paulvogel.bukkitstats.handlers.DBHandler;
 import me.paulvogel.bukkitstats.handlers.FilesHandler;
 import me.paulvogel.bukkitstats.handlers.LogHandler;
 import org.bukkit.Bukkit;
@@ -19,12 +20,12 @@ public class BukkitStats extends JavaPlugin {
     public void onEnable() {
         instance = this;
         getCommand("bukkitstats").setExecutor(new BukkitStatsCommandExecutor());
-        FilesHandler.CheckForConfigs();
+        FilesHandler.init();
+        DBHandler.init();
     }
     
     public void onDisable() {
-        
-        
+        DBHandler.getDatabaseInstance().close();
     }
     
     public static BukkitStats getInstance() {

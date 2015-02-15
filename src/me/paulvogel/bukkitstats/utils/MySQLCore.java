@@ -11,6 +11,7 @@ public class MySQLCore implements DBCore {
     private Logger log;
     private static Connection connection;
     private String host;
+    private int port;
     private String username;
     private String password;
     private String database;
@@ -22,9 +23,10 @@ public class MySQLCore implements DBCore {
      * @param username Username
      * @param password Password
      */
-    public MySQLCore(String host, String database, String username, String password) {
+    public MySQLCore(final String host, final int port, final String database, final String username, final String password) {
         this.database = database;
         this.host = host;
+        this.port = port;
         this.username = username;
         this.password = password;
         this.log = LogHandler.getLogger();
