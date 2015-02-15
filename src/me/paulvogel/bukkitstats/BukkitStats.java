@@ -4,6 +4,7 @@ import me.paulvogel.bukkitstats.commands.BukkitStatsCommandExecutor;
 import me.paulvogel.bukkitstats.handlers.DBHandler;
 import me.paulvogel.bukkitstats.handlers.FilesHandler;
 import me.paulvogel.bukkitstats.handlers.LogHandler;
+import me.paulvogel.bukkitstats.utils.DatabaseType;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -25,7 +26,10 @@ public class BukkitStats extends JavaPlugin {
     }
     
     public void onDisable() {
-        DBHandler.getDatabaseInstance().close();
+        if (DBHandler.type == DatabaseType.MongoDB)
+            DBHandler.getMongodbDatabaseInstance().close();
+        else if (DBHandler.type == DatabaseType.MySQL)
+            DBHandler.getMysqlDatabaseInstance().close();
     }
     
     public static BukkitStats getInstance() {

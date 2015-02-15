@@ -185,5 +185,13 @@ public class DBHandler {
                 Integer.parseInt(timeStringArray[0]), Integer.parseInt(timeStringArray[1]), Integer.parseInt(timeStringArray[2]));
         return result;
     }
+    
+    public static MongoDBCore getMongodbDatabaseInstance() {
+        return mongodbDatabaseInstance;
+    }
+    
+    public static MySQLCore getMysqlDatabaseInstance() {
+        return  mysqlDatabaseInstance;
+    }
 
 }
