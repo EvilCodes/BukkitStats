@@ -5,8 +5,13 @@ NoPlayer: "&cYou have to be a player to execute this command!"
 ####### Commands #######
     ################
 Reloaded: "%prefix% &aReloaded!"
-Create:
-   Usage: "&cFalscher Befehl! Richtiger Befehl: &a/city create name tag"
+Info:
+  Usage: "&cWrong syntax. &fUse &a/bs info <tablename> <playername>"
+  NoTable: "&cYou have to specify a database table you want to get the information from. \n&aAvailable tables: %tables%"
+  NoPlayer: "&cYou have to specify a username or uuid to get information about it."
 Help:
    Header: "&6========== [ &a%name% &bHelp &6] =========="
    Footer: "&6========== [ &a%name% &bHelp &6] =========="
+Stats:
+  Header: "&6========== [ &a%name% &bStats &6] =========="
+  Footer: "&6========== [ &a%name% &bStats &6] =========="

@@ -29,8 +29,10 @@ public class DBHandler {
     private static MySQLCore mysqlDatabaseInstance;
     private static MongoDBCore mongodbDatabaseInstance;
 
+    public static String[] dbtables = new String[]{"general"};
     //Table structures:
     //GENERAL - id, uuid, username (latest), first_login, last_login, times_logged_in, last_ip_address, 
+    //When adding tables add them to the commandexecutor for player info
     
     /**
      * Initiates the databaseclass with it's new instance and checks the connection.

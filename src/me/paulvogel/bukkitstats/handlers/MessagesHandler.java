@@ -1,16 +1,14 @@
-package com.evilcodes.citycraft.handlers;
-
-import com.evilcodes.citycraft.CityCraft;
+package me.paulvogel.bukkitstats.handlers;
 
 public class MessagesHandler {
 	
 	public static String noPermission(String permission) {
-		final String msg = CityCraft.messages.getString("NoPermissions").replace("&", "ง").replace("%permission%", permission);
+		final String msg = FilesHandler.messages.getString("NoPermissions").replace("&", "ยง").replace("%permission%", permission);
 		return msg;
 	}
 
 	public static String convert(String message) {
-		final String msg = CityCraft.messages.getString(message).replace("&", "ง");
+		final String msg = FilesHandler.messages.getString(message).replace("&", "ยง");
 		return msg;
 	}
 	
